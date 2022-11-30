@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
-            this.label6.Location = new System.Drawing.Point(205, 182);
+            this.label6.Location = new System.Drawing.Point(215, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 20);
             this.label6.TabIndex = 5;

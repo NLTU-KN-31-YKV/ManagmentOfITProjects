@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             // 
             this.button1.Location = new System.Drawing.Point(12, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
             // 
             this.button2.Location = new System.Drawing.Point(93, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 33);
             this.button2.TabIndex = 3;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             // 
             this.button3.Location = new System.Drawing.Point(174, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 22);
+            this.button3.Size = new System.Drawing.Size(80, 32);
             this.button3.TabIndex = 4;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -97,6 +97,7 @@ namespace WindowsFormsApp1
             this.Name = "Stones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stones";
+            this.Load += new System.EventHandler(this.Stones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

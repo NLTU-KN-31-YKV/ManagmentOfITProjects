@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
         private void адмініструванняToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Admin f3 = new Admin();
+            LogIn f3 = new LogIn();
             f3.ShowDialog();
         }
 

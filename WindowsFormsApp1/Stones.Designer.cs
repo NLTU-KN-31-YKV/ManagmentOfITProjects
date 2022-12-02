@@ -1,4 +1,4 @@
-﻿
+
 namespace WindowsFormsApp1
 {
     partial class Stones
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(586, 210);
             this.dataGridView1.TabIndex = 3;
-           // 
+            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = null;
@@ -162,7 +162,7 @@ namespace WindowsFormsApp1
             this.Name = "Stones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stones";
-           
+            this.Load += new System.EventHandler(this.Stones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);

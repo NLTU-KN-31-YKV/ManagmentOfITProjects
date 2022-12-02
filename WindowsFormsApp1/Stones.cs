@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -128,6 +128,11 @@ namespace WindowsFormsApp1
                 }
 
             }
+        }
+
+        private void Stones_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

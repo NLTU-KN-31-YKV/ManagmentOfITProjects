@@ -8,22 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
-    public partial class Admin : Form
+    public partial class LogIn : Form
     {
         public string[,] matrix;
         DataTable dt;
 
-        public Admin()
+        public LogIn()
         {
-
             InitializeComponent();
-            h.ConStr = "server=193.93.216.145; characterset = cp1251;  database=sqlkn20_2_kk; user=sqlkn20_2_kk; password=kn20_kk;";
-            dt = h.myfunDt("SELECT * FROM Person");
+
+            // h.ConStr = "Data Source = 127.0.0.1,3306;Network Library = DBMSSOCN; Initial Catalog = yitp;User ID = root; Password = root";
+            h.ConStr = "Server= localhost; Database= yitp; User ID = root; Password = root ";
+            dt = h.myfunDt("SELECT * FROM person");
             int kilk = dt.Rows.Count;
-            MessageBox.Show(kilk.ToString());
+            //MessageBox.Show(kilk.ToString());
 
             matrix = new string[kilk, 4];
             for (int i = 0; i < kilk; i++)
@@ -39,22 +41,24 @@ namespace WindowsFormsApp1
             cbxUser.Focus();
 
         }
+
         private void Avtorization()
         {
+            //textBox1.Text = h.EncriptedPassword(txtPassword.Text);
             bool flUser = false;
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 if (String.Equals(cbxUser.Text.ToUpper(), matrix[i, 1].ToUpper()))
                 {
                     flUser = true;
-                    if (String.Equals(txtPassword.Text, matrix[i, 3]))
+                    if (String.Equals(h.EncriptedPassword(txtPassword.Text), matrix[i, 3]))
                     {
                         h.nameUser = matrix[i, 1];
                         h.typeUser = matrix[i, 2];
                         cbxUser.Text = "";
                         txtPassword.Text = "";
                         this.Hide();
-                        Admin f0 = new Admin();
+                        Form1 f0 = new Form1();
                         f0.ShowDialog();
                     }
                     else
@@ -75,22 +79,32 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void cbxUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Avtorization();
+            else if (e.KeyCode == Keys.Escape)
+                Application.Exit();
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             Avtorization();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
+
     static class h
     {
+        //  internal static string conStr;
+
         public static string ConStr { get; set; }
         public static string typeUser { get; set; }
         public static string nameUser { get; set; }
         public static BindingSource bs1 { get; set; }
+        public static string curVa10 { get; set; }
+        public static string keyName { get; set; }
+        public static string pathToPhoto { get; set; }
 
         public static DataTable myfunDt(string commandString)
 
@@ -119,6 +133,29 @@ namespace WindowsFormsApp1
             }
             return dt;
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Avtorization();
+            else if (e.KeyCode == Keys.Escape)
+                Application.Exit();
+        }
+
+        public static string EncriptedPassword(string s)
+        {
+            if (string.Compare(s, "null", true) == 0)
+                return "NULL";
+            byte[] bytes = Encoding.Unicode.GetBytes(s);
+            MD5CryptoServiceProvider CSP = new MD5CryptoServiceProvider();
+            byte[] byteHach = CSP.ComputeHash(bytes);
+            string hash = string.Empty;
+            foreach (byte b in byteHach)
+                hash += String.Format("{0:x2}", b);
+            return hash;
+        }
+
+
     }
 
 }

@@ -80,11 +80,13 @@ namespace WindowsFormsApp1
         }
 
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             Avtorization();
         }
     }
+
     static class h
     {
         //  internal static string conStr;
@@ -124,7 +126,15 @@ namespace WindowsFormsApp1
             }
             return dt;
         }
-      
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Avtorization();
+            else if (e.KeyCode == Keys.Escape)
+                Application.Exit();
+        }
+
         public static string EncriptedPassword(string s)
         {
             if (string.Compare(s, "null", true) == 0)

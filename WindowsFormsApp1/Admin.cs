@@ -20,20 +20,13 @@ namespace WindowsFormsApp1
         public LogIn()
         {
             InitializeComponent();
-<<<<<<< HEAD
+
             // h.ConStr = "Data Source = 127.0.0.1,3306;Network Library = DBMSSOCN; Initial Catalog = yitp;User ID = root; Password = root";
             h.ConStr = "Server= localhost; Database= yitp; User ID = root; Password = root ";
             dt = h.myfunDt("SELECT * FROM person");
             int kilk = dt.Rows.Count;
             //MessageBox.Show(kilk.ToString());
 
-=======
-            h.ConStr = "Server= localhost; Database= yitp; User ID = root; Password = root ";
-            //h.ConStr = "server=193.93.216.145; characterset = cp1251;  database=sqlkn20_2_kk; user=sqlkn20_2_kk; password=kn20_kk;";
-            dt = h.myfunDt("SELECT * FROM Person");
-            int kilk = dt.Rows.Count;
-           
->>>>>>> CorrectStart
             matrix = new string[kilk, 4];
             for (int i = 0; i < kilk; i++)
             {

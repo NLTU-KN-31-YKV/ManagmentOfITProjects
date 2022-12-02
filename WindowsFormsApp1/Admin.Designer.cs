@@ -40,11 +40,7 @@ namespace WindowsFormsApp1
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(37, 159);
-<<<<<<< HEAD
             this.button1.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> CorrectStart
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(61, 28);
             this.button1.TabIndex = 0;
@@ -55,11 +51,8 @@ namespace WindowsFormsApp1
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(132, 158);
-<<<<<<< HEAD
             this.button2.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> CorrectStart
+
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(65, 28);
             this.button2.TabIndex = 1;
@@ -91,11 +84,7 @@ namespace WindowsFormsApp1
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(132, 84);
-<<<<<<< HEAD
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> CorrectStart
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(76, 20);
             this.txtPassword.TabIndex = 4;
@@ -105,11 +94,7 @@ namespace WindowsFormsApp1
             // 
             this.cbxUser.FormattingEnabled = true;
             this.cbxUser.Location = new System.Drawing.Point(132, 32);
-<<<<<<< HEAD
             this.cbxUser.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.cbxUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> CorrectStart
             this.cbxUser.Name = "cbxUser";
             this.cbxUser.Size = new System.Drawing.Size(92, 21);
             this.cbxUser.TabIndex = 6;
@@ -125,11 +110,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> CorrectStart
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";

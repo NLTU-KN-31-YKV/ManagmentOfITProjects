@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
 
         private void Avtorization()
         {
-            txtPassword.Text = h.EncriptedPassword(txtPassword.Text);
+            //textBox1.Text = h.EncriptedPassword(txtPassword.Text);
             bool flUser = false;
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -58,9 +58,7 @@ namespace WindowsFormsApp1
                         cbxUser.Text = "";
                         txtPassword.Text = "";
                         this.Hide();
-
                         Form1 f0 = new Form1();
-
                         f0.ShowDialog();
                     }
                     else
@@ -81,57 +79,10 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
-        {
-            Avtorization();
-
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void cbxUser_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Avtorization();
-            else if (e.KeyCode == Keys.Escape)
-                Application.Exit();
-        }
-
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Avtorization();
-            else if (e.KeyCode == Keys.Escape)
-                Application.Exit();
-        }
-
-        private void btnOk_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Avtorization();
-            else if (e.KeyCode == Keys.Escape)
-                Application.Exit();
-        }
-
-        private void btnExit_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Avtorization();
-            else if (e.KeyCode == Keys.Escape)
-                Application.Exit();
-        }
-
-        private void LogIn_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Avtorization();
         }
     }
     static class h
@@ -173,7 +124,7 @@ namespace WindowsFormsApp1
             }
             return dt;
         }
-
+      
         public static string EncriptedPassword(string s)
         {
             if (string.Compare(s, "null", true) == 0)

@@ -11,20 +11,20 @@ using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class Admin : Form
+    public partial class LogIn : Form
     {
         public string[,] matrix;
         DataTable dt;
 
-        public Admin()
+        public LogIn()
         {
 
             InitializeComponent();
-            h.ConStr = "server=193.93.216.145; characterset = cp1251;  database=sqlkn20_2_kk; user=sqlkn20_2_kk; password=kn20_kk;";
+            h.ConStr = "Server= localhost; Database= yitp; User ID = root; Password = root ";
+            //h.ConStr = "server=193.93.216.145; characterset = cp1251;  database=sqlkn20_2_kk; user=sqlkn20_2_kk; password=kn20_kk;";
             dt = h.myfunDt("SELECT * FROM Person");
             int kilk = dt.Rows.Count;
-            MessageBox.Show(kilk.ToString());
-
+           
             matrix = new string[kilk, 4];
             for (int i = 0; i < kilk; i++)
             {
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
                         cbxUser.Text = "";
                         txtPassword.Text = "";
                         this.Hide();
-                        Admin f0 = new Admin();
+                        LogIn f0 = new LogIn();
                         f0.ShowDialog();
                     }
                     else

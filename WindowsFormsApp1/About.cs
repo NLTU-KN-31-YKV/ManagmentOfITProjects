@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         public About()
         {
-			//Ініціалізація
+			
             InitializeComponent();
         }
     }

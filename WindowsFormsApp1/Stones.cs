@@ -12,6 +12,9 @@ namespace WindowsFormsApp1
 {
     public partial class Stones : Form
     {
+        string nameee = "Hello"
+
+
         int rowEdit = -1;
         int colEdit = -1;
         public Stones()

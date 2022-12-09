@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int testVar = 1;
+            
             string sqlStr = " DELETE FROM Stone WHERE " + textBox1.Text;
             if (MessageBox.Show("Ви впевнені?", "Видалити", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

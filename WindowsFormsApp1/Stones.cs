@@ -17,6 +17,10 @@ namespace WindowsFormsApp1
 
         int rowEdit = -1;
         int colEdit = -1;
+
+// test second var
+        int testVar2 =2;
+
         public Stones()
         {
             InitializeComponent();

@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
         public string[,] matrix;
         DataTable dt;
 
+        string hi = "hi";
+
         public LogIn()
         {
             InitializeComponent();

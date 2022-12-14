@@ -136,13 +136,13 @@ namespace WindowsFormsApp1
             return dt;
         }
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+       /* private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Avtorization();
             else if (e.KeyCode == Keys.Escape)
                 Application.Exit();
-        }
+        }*/
 
         public static string EncriptedPassword(string s)
         {
